@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="RichMessages\Facebook\" />
+    <Folder Include="RichMessages\Kik\" />
+    <Folder Include="RichMessages\Line\" />
+    <Folder Include="RichMessages\Viber\" />
+    <Folder Include="RichMessages\Telegram\" />
+    <Folder Include="RichMessages\Slack\" />
+    <Folder Include="RichMessages\Skype\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\newtonsoft.json\9.0.1\lib\netstandard1.0\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
