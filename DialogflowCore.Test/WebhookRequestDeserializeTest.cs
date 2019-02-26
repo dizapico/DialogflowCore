@@ -1,4 +1,5 @@
 using DialogflowCore;
+using DialogflowCore.HelperIntents;
 using Newtonsoft.Json;
 using NUnit.Framework;
 using System.IO;
@@ -25,6 +26,18 @@ namespace Tests
 
             Assert.AreEqual(WebhookRequest.responseId, "ea3d77e8-ae27-41a4-9e1d-174bd461b68c");
             
+        }
+
+        [Test] 
+        public void AddHelperIntent()
+        {
+            WebhookResponse response = new WebhookResponse();
+
+            response.AddHelperIntent(new SignInIntent());
+
+            Assert.NotNull(response.payload["google"]);
+
+            string json = JsonConvert.SerializeObject(response);
         }
     }
 }
